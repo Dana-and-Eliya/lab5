@@ -149,9 +149,10 @@ public class Main {
 			
 			
 			
-			
+			uprs.close();
 			rs.close();
 			stmt.close();
+			stmt1.close();
 			conn.close();
 
 		} catch (SQLException se) {
@@ -187,6 +188,7 @@ public class Main {
 				int price = rs.getInt("price");
 				System.out.format("Number %5s Origin %15s destinations %18s Distance %5d Price %5d\n", num, origin, destination, distance, price);
 			}
+			rs.close();
 		} catch (SQLException e) {
 			e.printStackTrace();
 		}
